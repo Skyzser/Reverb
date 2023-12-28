@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "next"
+  ],
+  // See https://stackoverflow.com/questions/31629389/how-to-use-eslint-with-jest to avoid false Eslint errors
+  "plugins": ["jest"],
+  // See https://github.com/eslint/eslint/issues/11451 for why we need browser true and es6 true
+  "env": {
+    "jest": true,
+    "browser": true,
+    "es6": true
+  }
+}

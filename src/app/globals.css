@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This is the colour palette chosen for the project */
+:root {
+  --colour1: #27374d;
+  --colour2: #526d82;
+  --colour3: #9db2bf;
+  --colour4: #dde6ed;
+}
+
+.mainBg {
+  background-color: var(--colour1);
+}
+.secondaryBg {
+  background-color: var(--colour2);
+}
+.tertiaryBg {
+  background-color: var(--colour3);
+}
+.mainWhiteBg {
+  background-color: var(--colour4);
+}
+
+/* This is the text sizes and colours chosen for this project */
+.titleText {
+  @apply text-4xl font-bold;
+  color: var(--colour3);
+  -webkit-text-stroke: 2px var(--colour2);
+}
+.primaryText {
+  @apply font-bold text-3xl;
+}
+.secondaryText {
+  @apply font-bold text-xl;
+}
+.tertiaryText {
+  @apply font-bold text-base;
+}
+
+.mainTextColour {
+  color: var(--colour4);
+}
+.secondaryTextColour {
+  color: var(--colour1);
+}
+
+.mainBorderRadius {
+  border-radius: 16px;
+}
+
+/* This is the styling for the button component */
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--colour4);
+  transition: all 0.25s ease;
+}
+.buttonContainer:hover {
+  cursor: pointer;
+  transform: scale(1.05) perspective(1px);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.buttonContainer:active {
+  background-color: #dde6edc9;
+}
+
+/* This is the styling for the container of each feature */
+.featureContainer {
+  width: 775px;
+  height: 364px;
+  background-color: var(--colour2);
+  border-radius: 16px;
+  border-color: var(--colour4);
+  border-width: 1px;
+}
+
+/* This is the styling for the remove button that appears when you hover over the feature to delete it */
+.removeButton {
+  display: none;
+}
+.optionalFeature:hover .removeButton {
+  display: flex;
+}
+
+/* This is the styling for the other boxes, such as the info box, and the dropdowns */
+.miscBox {
+  background-color: var(--colour2);
+  border-radius: 16px;
+  border-color: var(--colour4);
+  border-width: 1px;
+}
+
+/* Scrollbar - Firefox does not support scrollbar customisation */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--colour2); /* Color of the scrollbar thumb */
+  border-radius: 10px;
+}
+
+/* This is the styling for the speed modulator component */
+.speedModulatorButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 25%;
+}
+
+.speedModulatorButton:hover {
+  transform: scale(1.1);
+}
